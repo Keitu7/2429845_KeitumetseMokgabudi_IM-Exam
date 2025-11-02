@@ -31,11 +31,12 @@ html, body{
 }
 
 main {
-    min-height: 180vh;
+    min-height: 250vh;
     background: #f6f7fb;
     
 }
 
+/*Contact Page heading*/
 .contact-heading{
     opacity: 0;
     transform: translateY(140px);
@@ -52,12 +53,78 @@ main {
     z-index: 1;
 }
 
+/* SVG MotionPath work*/
 #svg-container{
-    border: 1px solid black;
-    height: 200px;
-    width: 200px;
-    position: flex;
+    
+    height: 700px;
+    width: 710px;
+    display: flex;
     top: 50%;
     left: 50%;
-    transform: translate(80%, -20%);
+    transform: translate(35%, -7%);
+}
+
+svg{
+    width: 710px;
+    height: 700px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    overflow: visible;
+}
+
+
+/*Black Address box with its info*/
+.address-section{
+    height: 375px;
+    width: 425px;
+    border: 1px solid black;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(228%, -200%);
+}
+
+.address-section h2{
+    font-size: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(250, 230, 206);
+    padding: 35px;
+}
+
+#address-links, address{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: beige;
+    font-style: normal;
+    text-decoration: none;
+    padding: 10px 35px;
+}
+
+#address-links{
+    padding: 2px;
+}
+
+.address-section p{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: beige;
+    padding: 10px 35px;
+}
+
+.address-section button{
+    height: 40px;
+    width: 110px;
+    font-size: 15px;
+    color: beige;
+    border-radius: 25px;
+    border: 1px solid beige;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 35px;
+    margin-top: 15px;
+}
+
+.address-section button:hover{
+    color: black;
+    background-color: beige;
 }
