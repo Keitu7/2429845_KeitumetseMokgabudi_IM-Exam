@@ -1,6 +1,3 @@
-
-
-
 // Create a GSAP timeline for the contact-heading
 const tl = gsap.timeline();
 
@@ -26,4 +23,20 @@ gsap.to("#pin",{
         autoRotate:true,
         alignOrigin:[0.5, 0.9]
     }
+});
+
+//Animating the signiture
+gsap.registerPlugin(DrawSVGPlugin);
+
+gsap.from("#signature", {
+  drawSVG: "0%",
+  duration: 4,
+  ease:"power2.inOut",
+  scrub: true,
+  scrollTrigger:{
+    trigger: "#signature",
+    start: "top 75%",
+    toggleActions: "play pause resume pause",
+
+  }
 });

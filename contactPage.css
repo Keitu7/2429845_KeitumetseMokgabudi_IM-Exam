@@ -30,8 +30,9 @@ html, body{
     z-index: 1;
 }
 
+/*changing the footer*/
 main {
-    min-height: 250vh;
+    min-height: 303vh;
     background: #f6f7fb;
     
 }
@@ -55,7 +56,6 @@ main {
 
 /* SVG MotionPath work*/
 #svg-container{
-    
     height: 700px;
     width: 710px;
     display: flex;
@@ -64,7 +64,7 @@ main {
     transform: translate(35%, -7%);
 }
 
-svg{
+#map{
     width: 710px;
     height: 700px;
     border-radius: 10px;
@@ -128,3 +128,33 @@ svg{
     color: black;
     background-color: beige;
 }
+
+/*Contact form*/
+.contact-form{
+    height: 420px;
+    width: 80rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgb(227, 215, 199);
+    margin-left: 200px;
+    margin-top: -310px;
+}
+
+/*Klava svg signiture*/
+.klava-signature{
+    height: 200px;
+    width: 600px;
+    margin-left: 500px;
+    margin-top: 150px;
+}
+
+#svg-signature{
+    width: 600px;
+    height: 200px;
+    display: block;
+}
+
+ #signature{
+    fill: none;
+    stroke: #000;
+    stroke-width: 3;
+ }
