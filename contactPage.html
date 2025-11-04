@@ -55,8 +55,56 @@
         </div>
     </section>
 
-    <section class="contact-form">
-    </section>
+    <form class="contact-form" id="contactForm" novalidate>
+        <h2 class="form-heading">How can we help you?</h2>
+
+       <div class="form-columns">
+        <!--Left side-->
+        <div class="left-col">
+            <div class="form-group" id="nameGroup">
+             <label for="name">Name</label>
+             <input type="text" id="name" name="name" placeholder="Your Name">
+             <small>Error message</small>
+            </div>
+
+            <div class="form-group" id="phoneGroup">
+              <label for="phone">Phone</label>
+              <input type="text" id="phone" name="phone" placeholder="Your Phone Number">
+              <small>Error message</small>
+           </div>
+
+            <div class="form-group" id="messageGroup">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your Message" maxlength="600"></textarea>
+              <small>Error message</small>
+              <p id="charCount">600 characters remaining</p>
+            </div>
+        </div>
+
+        <!--Right side-->
+        <div class="right-col">
+            <div class="form-group" id="emailGroup">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Your Email">
+              <small>Error message</small>
+            </div>
+
+            <div class="form-group" id="subjectGroup">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Subject">
+              <small>Error message</small>
+            </div>
+
+        </div>
+
+       </div>
+       
+       <div class="btn-wrap">
+          <button class="submit-btn" type="submit">Submit</button>
+       </div>
+
+        <p id="successMessage">Your messsage has been sent!</p>
+    </form>
 
     <section class="klava-signature">
         <svg id="svg-signature" viewBox="300 130 700 200">

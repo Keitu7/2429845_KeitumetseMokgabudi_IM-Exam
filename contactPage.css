@@ -24,7 +24,7 @@ html, body{
     bottom: 0;
     width: 100%;
     height: 80%;
-    background: url("images/massimo-adami-zEy5QBUBmRE-unsplash\ \(1\).jpg")center center/cover no-repeat;
+    background: url("/images/massimo-adami-zEy5QBUBmRE-unsplash\ \(1\).jpg")center center/cover no-repeat;
     transform: scale(1);
     transform-origin: center center;
     z-index: 1;
@@ -131,12 +131,139 @@ main {
 
 /*Contact form*/
 .contact-form{
-    height: 420px;
+    height: 430px;
     width: 80rem;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     background-color: rgb(227, 215, 199);
     margin-left: 200px;
     margin-top: -310px;
+    padding: 30px 40px;
+}
+
+.form-heading {
+    font-size: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(96, 94, 94); 
+    margin-bottom: 15px;
+}
+
+.form-group{
+    margin-bottom: 22px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, 
+.form-group textarea{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    outline: none;
+    border-color: #007BFF;
+}
+
+.form-group.success input,
+.form-group.success textarea{
+    border-color: #28a745;
+}
+
+.form-group.error input,
+.form-group.error textarea{
+    border-color: #dc3545;
+}
+
+.form-group small {
+    color: #dc3545;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    font-size: 12px;
+    visibility: hidden;
+}
+
+.form-group.success small{
+    color: #28a745;
+    visibility: visible;
+}
+
+.form-group.error small{
+    visibility: visible;
+}
+
+.submit-btn{
+    width: 100px;
+    height: 40px;
+    background: #000;
+    color: beige;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3;
+    padding: 12px 28px;
+}
+
+.submit-btn:hover{
+    background: #E77291;
+    color: black;
+}
+
+.btn-wrap{
+    display:flex;
+    justify-content: flex-end;
+    margin-top: -80px;
+}
+
+#successMessage{
+    display: none;
+    color: #28a745;
+    font-weight: 600;
+    margin-top: 15px;
+    text-align: right;
+}
+
+#charCount{
+    text-align: right;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #666;
+}
+
+.form-columns{
+    display: flex;
+    gap:25px
+}
+
+.left-col, 
+.right-col{
+    width:50%;
+}
+
+.left-col .form-group,
+.right-col .form-group{
+    width: 100%;
+}
+
+@media(max-width:700px){
+    .form-columns{
+        flex-direction:column;
+        height: 100%;
+    }
+
+    .left-col, .right-col{
+        width: 100%;
+    }
 }
 
 /*Klava svg signiture*/
