@@ -2,12 +2,15 @@
 const tl = gsap.timeline();
 
 // Animate the title first
-tl.to(".contact-heading", {
-  duration: 1.6,
+tl.fromTo(".contact-heading", {
+  opacity:0,
+  y:140
+},
+  {duration: 1.6,
   opacity: 1,
   y: -70,
   ease: "power2.out"
-})
+});
 
 
 //Creating GSAP MotionPath for the map and pin route
