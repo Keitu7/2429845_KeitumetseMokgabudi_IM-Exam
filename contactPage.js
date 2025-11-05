@@ -4,7 +4,7 @@ const tl = gsap.timeline();
 // Animate the title first
 tl.fromTo(".contact-heading", {
   opacity:0,
-  y:140
+  y:120
 },
   {duration: 1.6,
   opacity: 1,
