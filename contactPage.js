@@ -5,7 +5,7 @@ const tl = gsap.timeline();
 tl.to(".contact-heading", {
   duration: 1.6,
   opacity: 1,
-  y: 0,
+  y: -70,
   ease: "power2.out"
 })
 
