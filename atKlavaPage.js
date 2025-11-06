@@ -117,3 +117,109 @@ gsap.from("#signature", {
 
   }
 });
+
+
+//The js code for the API menu list and filtering funtionality
+//=== My Spoonacular API KEY ===
+const API_KEY= "026892c3cc0447c098eeeabbe190f59c";
+
+//The base search words for each section
+const sectionQueries ={
+  pastry: "pastry",
+  cake: "cake",
+  dessert: "dessert"
+};
+
+//The max items fetched per section
+const ITEMS_PER_SECTION = 15;
+
+//The <ul> elements
+const lists = {
+  pastry: document.getElementById("pastry-list"),
+  cake: document.getElementById("cake-list"),
+  dessert: document.getElementById("dessert-list")
+};
+
+//The filter buttons
+const allBtn = document.getElementById("all-btn");
+const vanillaBtn = document.getElementById("vanilla-btn");
+const chocolateBtn = document.getElementById("chocolate-btn");
+const mixedBtn = document.getElementById("mixed-btn");
+
+
+//store original full results so ALL button can restore original results
+let originalResults = {
+  pastry: [],
+  cake: [],
+  dessert: []
+};
+
+
+//=== Function to fetch API Data from SPOONACULAR ===
+async function fetchSection(sectionName, query) {
+  const url = `https://api.spoonacular.com/food/products/search?query=${query}&number=${ITEMS_PER_SECTION}&apiKey=${API_KEY}`;
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    if (data.products) {
+      return data.products.map(item => item.title);
+    } else {
+      console.error('No products found for ${sectionName}');
+      return [];
+    }
+  } catch (err) {
+    console.error(err);
+    return [];
+  }
+}
+
+//=== Function to render list items ===
+function renderList(listElement, items) {
+  listElement.innerHTML = ""; //clears previous filtered results
+  items.forEach(title => {
+    const li = document.createElement("li");
+    li.textContent = title;
+    listElement.appendChild(li);
+  });
+}
+
+//===Initial Load: Fetch all sections ===
+async function loadAllSections() {
+  const pastryItems = await fetchSection("pastry", sectionQueries.pastry);
+  const cakeItems = await fetchSection("cake", sectionQueries.cake);
+  const dessertItems = await fetchSection("dessert", sectionQueries.dessert);
+
+  originalResults.pastry = pastryItems;
+  originalResults.cake = cakeItems;
+  originalResults.dessert = dessertItems;
+
+  renderList(lists.pastry, pastryItems);
+  renderList(lists.cake, cakeItems);
+  renderList(lists.dessert, dessertItems);
+}
+
+//=== Filter Functions ===
+function filterItems(keyword) {
+  Object.keys(originalResults).forEach(section => {
+    const filtered = originalResults[section].filter(title =>
+      keyword == "mixed"
+      ? !title.toLowerCase().includes("vanille") && !title.toLowerCase().includes("chocolat")
+      : title.toLowerCase().includes(keyword)
+    );
+    renderList(lists[section], filtered);
+  });
+}
+
+//=== Button Event Listeners ===
+allBtn.addEventListener("click", () => {
+  renderList(lists.pastry, originalResults.pastry);
+  renderList(lists.cake, originalResults.cake);
+  renderList(lists.dessert, originalResults.dessert);
+});
+
+vanillaBtn.addEventListener("click", () => filterItems("vanille"));
+chocolateBtn.addEventListener("click", () => filterItems("chocolat"));
+mixedBtn.addEventListener("click", () => filterItems("mixed"));
+
+//=== Initial Load ===
+loadAllSections();
