@@ -33,7 +33,7 @@ html, body{
 
 /*changing the footer*/
 main {
-    min-height: 303vh;
+    min-height: auto !important;
     background: #f6f7fb;
     
 }

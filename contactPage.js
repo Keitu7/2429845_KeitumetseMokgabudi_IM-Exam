@@ -8,7 +8,7 @@ tl.fromTo(".contact-heading", {
 },
   {duration: 1.6,
   opacity: 1,
-  y: -40,
+  y: -70,
   ease: "power2.out"
 });
 
