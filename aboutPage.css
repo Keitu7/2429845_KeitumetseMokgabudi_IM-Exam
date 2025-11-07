@@ -147,10 +147,10 @@ main {
 /*Black Address box with its info*/
 .address-section{
     position: absolute;
-    right: 0;
+    left: 50%;
     top: 0;
     height: 375px;
-    width: 525px;
+    width: 725px;
     border: 1px solid black;
     background-color: black;
 }
