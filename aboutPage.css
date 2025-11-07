@@ -147,7 +147,7 @@ main {
 /*Black Address box with its info*/
 .address-section{
     position: absolute;
-    left: 50%;
+    left: 10%;
     top: 0;
     height: 375px;
     width: 725px;
