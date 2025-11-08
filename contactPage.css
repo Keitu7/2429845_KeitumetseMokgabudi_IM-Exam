@@ -59,6 +59,7 @@ main {
 /*Contact Page heading*/
 .contact-heading{
     opacity: 0;
+    
     font-size: 140px;
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

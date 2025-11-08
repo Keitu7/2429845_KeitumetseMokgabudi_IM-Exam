@@ -68,3 +68,19 @@ gsap.utils.toArray(".about-heading").forEach(heading => {
     }
   });
 });
+
+
+//Animating the signature
+gsap.registerPlugin(DrawSVGPlugin);
+
+gsap.from("#signature", {
+  drawSVG: "0%",
+  duration: 4,
+  ease:"power2.inOut",
+  scrollTrigger:{
+    trigger: "#signature",
+    start: "top 75%",
+    toggleActions: "play pause resume pause",
+
+  }
+});

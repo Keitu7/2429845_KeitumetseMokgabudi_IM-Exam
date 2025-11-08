@@ -214,8 +214,8 @@ main {
     display: block;
 }
 
- #signature{
+#signature{
     fill: none;
     stroke: #000;
     stroke-width: 3;
- }
+}
