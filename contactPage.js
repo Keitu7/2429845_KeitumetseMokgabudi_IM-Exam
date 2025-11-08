@@ -2,13 +2,10 @@
 const tl = gsap.timeline();
 
 // Animate the title first
-tl.fromTo(".contact-heading", {
-  opacity:0,
-  y:140
-},
-  {duration: 1.6,
+tl.to(".contact-heading", {
+  duration: 1.6,
   opacity: 1,
-  y: -70,
+  y: 0,
   ease: "power2.out"
 });
 

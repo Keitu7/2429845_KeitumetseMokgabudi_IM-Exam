@@ -8,12 +8,12 @@ html, body{
     height: 100vh;
     overflow: hidden;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     color: #fff;
     margin: 0;
     padding: 0;
-    top: -160px;
+    top: -160px; /*This is what raises the background image up*/
 }
 
 .bg-image{
@@ -31,7 +31,157 @@ html, body{
 }
 
 main {
-    min-height: 180vh;
+    min-height: 500vh; /*the height everywhere else is auto !important*/
     background: #f6f7fb;
-    
+}
+
+/*Klava Title*/
+h1{
+    font-size: 145px;
+    font-family: 'playfair display';
+    letter-spacing: 10px;
+    color: white;
+    text-shadow: 0 8px 20px rgba(255, 255, 255, 0.514);
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    top: 5rem;
+}
+
+.klava-title span {
+    display: inline-block;
+}
+
+.klava-tagline {
+    position: absolute;
+    z-index: 2;
+    bottom: 4rem;
+    left: 4rem;
+    color: white;
+    font-size: 35px;
+    font-family: 'playfair display';
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+/*KLAVA's About Us heading*/
+.about-heading{
+    font-size: 70px;
+    font-weight: 400;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline-block;
+
+    /*changes*/
+    margin-bottom: 0.1rem;
+}
+
+/*thin line-break*/
+.blog-divider{
+    width: 100%;
+    height: 1.5px;
+    background-color: #E77291;
+    margin: 1rem 0;
+}
+
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.about-content:last-of-type{
+    margin-bottom: 0;
+}
+
+/*Klava's story paragraph*/
+.about-info{
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.about-text{
+    max-width: 700px;
+    margin: 0 auto 0 0;
+    flex: 1;
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+.about-text p{
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.about-info img{
+    width: 400px;
+    height: 400px;
+}
+
+/*Read More button*/
+.about-read-more {
+    position: relative;
+    margin-top: -3rem;
+    margin-left: 560px;
+    text-align: left; /*aligns with the about text*/
+}
+
+.about-read-more .readMoreBtn {
+    padding: 0.6rem 1.5rem;
+    background: black;
+    color: #E77291;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    margin-bottom: 12rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.281);
+}
+
+
+.about-read-more .readMoreBtn:hover{
+    background: #E77291;
+    color: black;
+}
+
+.about-read-more .readMoreBtn:active {
+    transform: scale(0.96);
+}
+
+/*GALLERY*/
+/*Gallery container */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px; /*default row height*/
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+/*Image styles*/
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+/*Vertical & horizontal sizes*/
+.vertical {
+    grid-row: span 1; /*taller images*/
+}
+
+.horizontal {
+    grid-row: span 1; /*shorter images*/
+}
+
+/*Linked images hover effect*/
+.gallery-link img:hover {
+    filter: grayscale(100%) brightness(60%);
+    cursor: pointer;
 }

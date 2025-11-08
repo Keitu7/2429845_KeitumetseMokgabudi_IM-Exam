@@ -7,7 +7,7 @@ tl.to(".atKlava-heading", {
   opacity: 1,
   y: 0,
   ease: "power2.out"
-})
+});
 
 //Animate the pastry h2 
 gsap.from(".pastry", {
