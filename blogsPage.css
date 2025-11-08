@@ -38,7 +38,7 @@ main {
 
 /*atKlava Page heading*/
 .blogs-heading{
-    opacity: 1;
+    opacity: 0;
     transform: translateY(140px);
     font-size: 140px;
     font-weight: bold;
@@ -49,6 +49,116 @@ main {
     -webkit-text-stroke: 1px white;
     display: inline-block;
     margin-left: 40px;
-    margin-bottom: 212px;
+    margin-bottom: 52px;
     z-index: 1;
 }
+
+/*blog headings*/
+.blog1-heading{
+    font-size: 35px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline-block;
+    margin-left: 70px;
+    margin-bottom: 2rem;
+}
+
+.blog1-info {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/*thin line-break*/
+.blog-divider{
+    width: 100%;
+    height: 1px;
+    background-color: #E77291;
+    margin: 1rem 0;
+}
+
+.about-text{
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-text p{
+    margin-bottom: 1.5rem;
+    line-height: 1.65;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.blog-images {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.blog-images img{
+    width: 490px;
+    height: 320px;
+    object-fit: cover;
+}
+
+#three-images img{
+    width: 318px;
+    height: 340px;
+}
+
+.moreText {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease, opacity 0.8s ease;
+}
+
+.moreText.open {
+    max-height: 1000px;
+    opacity: 1;
+}
+
+.readMoreBtn {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: black;
+    color: #E77291;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 8rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.281);
+}
+
+.readMoreBtn:hover{
+    background: #E77291;
+    color: black;
+}
+
+.readMoreBtn:active {
+    transform: scale(0.96);
+}
+
+/*KLAVA's signature*/
+.klava-signature{
+    height: 200px;
+    width: 600px;
+    margin-left: 500px;
+    margin-top: 75px;
+}
+
+#svg-signature{
+    width: 600px;
+    height: 200px;
+    display: block;
+}
+
+ #signature{
+    fill: none;
+    stroke: #000;
+    stroke-width: 3;
+ }
