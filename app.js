@@ -69,6 +69,20 @@ gsap.utils.toArray(".about-heading").forEach(heading => {
   });
 });
 
+//Gallery staggering
+gsap.from(".gallery span", {
+  scrollTrigger: {
+    trigger: ".gallery",
+    start: "top 65%",
+    toggleActions: "play none none reverse"
+  },
+  y:140,
+  opacity: 0,
+  duration:0.8,
+  stagger: 0.7,
+  ease: "power3.out"
+});
+
 
 //Animating the signature
 gsap.registerPlugin(DrawSVGPlugin);
